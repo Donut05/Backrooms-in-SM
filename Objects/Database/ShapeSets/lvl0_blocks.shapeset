@@ -1,7 +1,7 @@
 {
    "blockList" : [
       {
-         "asg" : "$CONTENT_DATA/Objects/Textures/lvl0/wallpaper_lvl0_asg.tga",
+         "asg" : "$CONTENT_DATA/Objects/Textures/lvl0/wallpaper_lvl0_asg.png",
          "dif" : "$CONTENT_DATA/Objects/Textures/lvl0/wallpaper_lvl0_dif.tga",
          "name" : "blk_lvl_0_wallpaper",
          "nor" : "$CONTENT_DATA/Objects/Textures/lvl0/wallpaper_lvl0_nor.tga",

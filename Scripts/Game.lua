@@ -1,6 +1,6 @@
-dofile "$GAME_DATA/Scripts/game/CreativeGame.lua"
+dofile "$CONTENT_DATA/Scripts/SurvivalGame.lua"
 
-Game = class( CreativeGame )
+Game = class( SurvivalGame )
 
 function Game.server_onCreate( self )
     SurvivalGame.server_onCreate( self )
