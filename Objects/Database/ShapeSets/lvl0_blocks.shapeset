@@ -1,0 +1,13 @@
+{
+   "blockList" : [
+      {
+         "asg" : "$CONTENT_DATA/Objects/Textures/lvl0/wallpaper_lvl0_asg.tga",
+         "dif" : "$CONTENT_DATA/Objects/Textures/lvl0/wallpaper_lvl0_dif.tga",
+         "name" : "Lvl_0_wallpaper",
+         "nor" : "$CONTENT_DATA/Objects/Textures/lvl0/wallpaper_lvl0_nor.tga",
+         "physicsMaterial" : "Fabric",
+         "tiling" : 8,
+         "uuid" : "e485d4c1-666d-410f-8102-067c5cac5beb"
+      }
+   ]
+}
