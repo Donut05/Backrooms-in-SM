@@ -1,6 +1,6 @@
-dofile "$SURVIVAL_DATA/Scripts/game/SurvivalPlayer.lua"
+dofile "$GAME_DATA/Scripts/game/CreativePlayer.lua"
 
-Player = class( SurvivalPlayer )
+Player = class( CreativePlayer )
 
 function Player.server_onCreate( self )
     SurvivalPlayer.server_onCreate( self )
