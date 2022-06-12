@@ -1,7 +1,7 @@
 {
    "blockList" : [
       {
-         "asg" : "$CONTENT_DATA/Objects/Textures/lvl0/wallpaper_lvl0_asg.png",
+         "asg" : "$CONTENT_DATA/Objects/Textures/lvl0/wallpaper_lvl0_asg.tga",
          "dif" : "$CONTENT_DATA/Objects/Textures/lvl0/wallpaper_lvl0_dif.tga",
          "name" : "blk_lvl_0_wallpaper",
          "nor" : "$CONTENT_DATA/Objects/Textures/lvl0/wallpaper_lvl0_nor.tga",
@@ -9,11 +9,11 @@
          "tiling" : 8,
          "uuid" : "e485d4c1-666d-410f-8102-067c5cac5beb"
       },
-	  {
-         "asg" : "$CONTENT_DATA/Objects/Textures/lvl0/blk_ceilingplate_asg.png",
-         "dif" : "$CONTENT_DATA/Objects/Textures/lvl0/blk_ceilingplate_dif.png",
+      {
+         "asg" : "$CONTENT_DATA/Objects/Textures/lvl0/blk_ceilingplate_asg.tga",
+         "dif" : "$CONTENT_DATA/Objects/Textures/lvl0/blk_ceilingplate_dif.tga",
          "name" : "blk_lvl_0_soundisolation",
-         "nor" : "$CONTENT_DATA/Objects/Textures/lvl0/blk_ceilingplate_nor.png",
+         "nor" : "$CONTENT_DATA/Objects/Textures/lvl0/blk_ceilingplate_nor.tga",
          "physicsMaterial" : "Concrete",
          "tiling" : 8,
          "uuid" : "760e0379-d643-428e-9ae4-5ff1079dfebe"
