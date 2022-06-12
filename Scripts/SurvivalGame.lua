@@ -47,7 +47,7 @@ function SurvivalGame.server_onCreate( self )
 		self.sv.saved = {}
 		self.sv.saved.data = self.data
 		printf( "Seed: %.0f", self.sv.saved.data.seed )
-		self.sv.saved.overworld = sm.world.createWorld( "$SURVIVAL_DATA/Scripts/game/worlds/Overworld.lua", "Overworld", { dev = self.sv.saved.data.dev }, self.sv.saved.data.seed )
+		self.sv.saved.overworld = sm.world.createWorld( "$CONTENT_DATA/Scripts/worlds/Overworld.lua", "Overworld", { dev = self.sv.saved.data.dev }, self.sv.saved.data.seed )
 		self.storage:save( self.sv.saved )
 	end
 	self.data = nil
@@ -170,11 +170,11 @@ function SurvivalGame.client_onCreate( self )
 
 	g_effectManager = EffectManager()
 	g_effectManager:cl_onCreate()
-
+--[[
 	-- Music effect
 	g_survivalMusic = sm.effect.createEffect( "SurvivalMusic" )
 	assert(g_survivalMusic)
-
+]]--
 	-- Survival HUD
 	g_survivalHud = sm.gui.createSurvivalHudGui()
 	assert(g_survivalHud)
