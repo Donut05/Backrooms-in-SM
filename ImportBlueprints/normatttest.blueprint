@@ -1,0 +1,378 @@
+
+{
+	"bodies" : 
+	[
+		
+		{
+			"childs" : 
+			[
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 1.0,
+						"z" : 2.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -3.0,
+						"y" : -5.0,
+						"z" : 1.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 4.0,
+						"z" : 1.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -3.0,
+						"y" : -4.0,
+						"z" : 2.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 1.0,
+						"z" : 2.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -3.0,
+						"y" : 5.0,
+						"z" : 1.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 4.0,
+						"z" : 1.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -3.0,
+						"y" : 1.0,
+						"z" : 2.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 1.0,
+						"z" : 2.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : 18.0,
+						"y" : 5.0,
+						"z" : 1.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 4.0,
+						"z" : 1.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : 18.0,
+						"y" : 1.0,
+						"z" : 2.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : 18.0,
+						"y" : -3.0,
+						"z" : 1.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 1.0,
+						"z" : 2.0
+					},
+					"color" : "FFFFFF",
+					"joints" : 
+					[
+						
+						{
+							"id" : 2.0
+						}
+					],
+					"pos" : 
+					{
+						"x" : 18.0,
+						"y" : -3.0,
+						"z" : 5.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"color" : "F5F071",
+					"controller" : 
+					{
+						"id" : 35.0,
+						"joints" : 
+						[
+							
+							{
+								"endAngle" : 15.0,
+								"frames" : 
+								[
+									
+									{
+										"targetAngle" : 15.0
+									},
+									
+									{
+										"targetAngle" : 0.0
+									},
+									
+									{
+										"targetAngle" : 0.0
+									},
+									
+									{
+										"targetAngle" : 0.0
+									},
+									
+									{
+										"targetAngle" : 0.0
+									},
+									
+									{
+										"targetAngle" : 0.0
+									},
+									
+									{
+										"targetAngle" : 0.0
+									},
+									
+									{
+										"targetAngle" : 0.0
+									},
+									
+									{
+										"targetAngle" : 0.0
+									},
+									
+									{
+										"targetAngle" : 0.0
+									},
+									
+									{
+										"targetAngle" : 0.0
+									}
+								],
+								"id" : 2.0,
+								"index" : 0.0,
+								"reverse" : false,
+								"startAngle" : 15.0
+							}
+						],
+						"playMode" : 0.0,
+						"timePerFrame" : 5.0
+					},
+					"pos" : 
+					{
+						"x" : 19.0,
+						"y" : -2.0,
+						"z" : 3.0
+					},
+					"shapeId" : "a092359d-5cea-484d-a274-470d9a567632",
+					"xaxis" : 3.0,
+					"zaxis" : -2.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 3.0,
+						"z" : 1.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : 18.0,
+						"y" : -3.0,
+						"z" : 2.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 6.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : 13.0,
+						"y" : 0.0,
+						"z" : 2.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 16.0,
+						"y" : 1.0,
+						"z" : 16.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -3.0,
+						"y" : 0.0,
+						"z" : 2.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				}
+			],
+			"type" : 0.0
+		},
+		
+		{
+			"childs" : 
+			[
+				
+				{
+					"color" : "EEEEEE",
+					"controller" : 
+					{
+						"color" : "EEEEEE",
+						"coneAngle" : 0.0,
+						"id" : 36.0,
+						"luminance" : 100.0
+					},
+					"joints" : 
+					[
+						
+						{
+							"id" : 2.0
+						}
+					],
+					"pos" : 
+					{
+						"x" : 19.0,
+						"y" : -2.0,
+						"z" : 7.0
+					},
+					"shapeId" : "ed27f5e2-cac5-4a32-a5d9-49f116acc6af",
+					"xaxis" : -2.0,
+					"zaxis" : -1.0
+				}
+			],
+			"type" : 0.0
+		}
+	],
+	"dependencies" : 
+	[
+		
+		{
+			"contentId" : "10f031ed-4043-4c47-9404-d3cdf013c664",
+			"name" : "Backrooms in SM",
+			"shapeIds" : [ "e485d4c1-666d-410f-8102-067c5cac5beb" ],
+			"steamFileId" : 0.0
+		}
+	],
+	"joints" : 
+	[
+		
+		{
+			"childA" : 7.0,
+			"childB" : 12.0,
+			"color" : "F5F071",
+			"id" : 2.0,
+			"posA" : 
+			{
+				"x" : 18.0,
+				"y" : -3.0,
+				"z" : 7.0
+			},
+			"posB" : 
+			{
+				"x" : 18.0,
+				"y" : -3.0,
+				"z" : 7.0
+			},
+			"shapeId" : "4a1b886b-913e-4aad-b5b6-6e41b0db23a6",
+			"xaxisA" : 1.0,
+			"xaxisB" : 1.0,
+			"zaxisA" : 3.0,
+			"zaxisB" : 3.0
+		}
+	],
+	"version" : 4.0
+}

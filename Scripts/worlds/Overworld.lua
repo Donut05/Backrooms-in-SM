@@ -121,7 +121,7 @@ function Overworld.client_onUpdate( self, deltaTime )
 	BaseWorld.client_onUpdate( self, deltaTime )
 	
 	g_unitManager:cl_onWorldUpdate( self, deltaTime )
-
+--[[
 	local night = 1.0 - getDayCycleFraction()
 	self.ambienceEffect:setParameter( "amb_day_night", night )
 
@@ -146,7 +146,7 @@ function Overworld.client_onUpdate( self, deltaTime )
 			g_survivalMusic:setParameter( "music", 4 )
 		end
 	end
-
+]]--
 end
 
 function Overworld.cl_n_unitMsg( self, msg )

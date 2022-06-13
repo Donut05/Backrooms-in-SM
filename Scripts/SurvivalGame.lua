@@ -170,6 +170,10 @@ function SurvivalGame.client_onCreate( self )
 
 	g_effectManager = EffectManager()
 	g_effectManager:cl_onCreate()
+
+	if g_survivalDev then
+		self.network:sendToServer( "sv_setLimitedInventory", false )
+	end
 --[[
 	-- Music effect
 	g_survivalMusic = sm.effect.createEffect( "SurvivalMusic" )
@@ -625,7 +629,7 @@ function SurvivalGame.sv_giveItem( self, params )
 	sm.container.collect( params.player:getInventory(), params.item, params.quantity, false )
 	sm.container.endTransaction()
 end
-
+--[[
 function SurvivalGame.cl_n_onJoined( self, params )
 	self.cl.playIntroCinematic = params.newPlayer
 end
@@ -658,7 +662,7 @@ function SurvivalGame.cl_onCinematicEvent( self, eventName, params )
 		sm.event.sendToPlayer( myPlayer, "cl_n_endFadeToBlack", { duration = IntroEndFadeDuration } )
 	end
 end
-
+]]--
 
 
 
@@ -750,11 +754,11 @@ end
 
 function SurvivalGame.sv_exportCreation( self, params )
 	local obj = sm.json.parseJsonString( sm.creation.exportToString( params.body ) )
-	sm.json.save( obj, "$SURVIVAL_DATA/LocalBlueprints/"..params.name..".blueprint" )
+	sm.json.save( obj, "$CONTENT_DATA/ImportBlueprints/"..params.name..".blueprint" )
 end
 
 function SurvivalGame.sv_importCreation( self, params )
-	sm.creation.importFromFile( params.world, "$SURVIVAL_DATA/LocalBlueprints/"..params.name..".blueprint", params.position )
+	sm.creation.importFromFile( params.world, "$CONTENT_DATA/ImportBlueprints/"..params.name..".blueprint", params.position )
 end
 
 function SurvivalGame.sv_onChatCommand( self, params, player )
