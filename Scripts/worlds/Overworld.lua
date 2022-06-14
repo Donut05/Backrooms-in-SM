@@ -51,7 +51,7 @@ function Overworld.client_onCreate( self )
 	self.ambienceEffect:start()
 	self.birdAmbienceTimer = Timer()
 	self.birdAmbienceTimer:start( 40 )
-	self.birdAmbience = { near = {}, far = {} }
+--	self.birdAmbience = { near = {}, far = {} }
 end
 
 function Overworld.client_onDestroy( self )
