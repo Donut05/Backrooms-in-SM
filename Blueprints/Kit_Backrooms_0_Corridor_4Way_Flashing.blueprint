@@ -1,0 +1,1889 @@
+
+{
+	"bodies" : 
+	[
+		
+		{
+			"childs" : 
+			[
+				
+				{
+					"color" : "D02525",
+					"controller" : 
+					{
+						"active" : false,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1232.0
+							},
+							
+							{
+								"id" : 1239.0
+							},
+							
+							{
+								"id" : 1240.0
+							}
+						],
+						"id" : 1232.0,
+						"mode" : 2.0
+					},
+					"pos" : 
+					{
+						"x" : 1.0,
+						"y" : -13.0,
+						"z" : 24.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : -1.0,
+					"zaxis" : 2.0
+				},
+				
+				{
+					"color" : "222222",
+					"controller" : 
+					{
+						"active" : true,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1229.0
+							}
+						],
+						"id" : 1231.0,
+						"mode" : 4.0
+					},
+					"pos" : 
+					{
+						"x" : 0.0,
+						"y" : -12.0,
+						"z" : 24.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : -1.0,
+					"zaxis" : 2.0
+				},
+				
+				{
+					"color" : "0A3EE2",
+					"controller" : 
+					{
+						"active" : false,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1229.0
+							},
+							
+							{
+								"id" : 1231.0
+							}
+						],
+						"id" : 1230.0,
+						"mode" : 1.0
+					},
+					"pos" : 
+					{
+						"x" : 1.0,
+						"y" : -12.0,
+						"z" : 24.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : -1.0,
+					"zaxis" : 2.0
+				},
+				
+				{
+					"color" : "222222",
+					"controller" : 
+					{
+						"active" : false,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1232.0
+							}
+						],
+						"id" : 1229.0,
+						"mode" : 0.0
+					},
+					"pos" : 
+					{
+						"x" : 0.0,
+						"y" : -13.0,
+						"z" : 24.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : -1.0,
+					"zaxis" : 2.0
+				},
+				
+				{
+					"color" : "DF7F01",
+					"controller" : 
+					{
+						"active" : false,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1230.0
+							}
+						],
+						"id" : 1240.0,
+						"seconds" : 0.0,
+						"ticks" : 40.0
+					},
+					"pos" : 
+					{
+						"x" : 0.0,
+						"y" : -10.0,
+						"z" : 25.0
+					},
+					"shapeId" : "8f7fd0e7-c46e-4944-a414-7ce2437bb30f",
+					"xaxis" : -3.0,
+					"zaxis" : -2.0
+				},
+				
+				{
+					"color" : "DF7F01",
+					"controller" : 
+					{
+						"active" : false,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1237.0
+							}
+						],
+						"id" : 1239.0,
+						"mode" : 0.0
+					},
+					"pos" : 
+					{
+						"x" : -1.0,
+						"y" : -10.0,
+						"z" : 24.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : 1.0,
+					"zaxis" : -2.0
+				},
+				
+				{
+					"color" : "DF7F01",
+					"controller" : 
+					{
+						"active" : true,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1239.0
+							},
+							
+							{
+								"id" : 1215.0
+							}
+						],
+						"id" : 1238.0,
+						"mode" : 4.0
+					},
+					"pos" : 
+					{
+						"x" : -1.0,
+						"y" : -9.0,
+						"z" : 24.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : 1.0,
+					"zaxis" : -2.0
+				},
+				
+				{
+					"color" : "DF7F01",
+					"controller" : 
+					{
+						"active" : false,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1238.0
+							}
+						],
+						"id" : 1237.0,
+						"mode" : 0.0
+					},
+					"pos" : 
+					{
+						"x" : 0.0,
+						"y" : -9.0,
+						"z" : 24.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : 1.0,
+					"zaxis" : -2.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 2.0,
+						"y" : 8.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -1.0,
+						"y" : -21.0,
+						"z" : 24.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 10.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 1.0,
+						"y" : -21.0,
+						"z" : 24.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 12.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 1.0,
+						"y" : -10.0,
+						"z" : 24.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 23.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 2.0,
+						"y" : -21.0,
+						"z" : 24.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 2.0,
+						"y" : 11.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -1.0,
+						"y" : -9.0,
+						"z" : 24.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 13.0,
+						"y" : 23.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -14.0,
+						"y" : -21.0,
+						"z" : 24.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"color" : "DF7F01",
+					"controller" : 
+					{
+						"active" : true,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1218.0
+							},
+							
+							{
+								"id" : 1221.0
+							}
+						],
+						"id" : 1235.0,
+						"mode" : 4.0
+					},
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : -23.0,
+						"z" : 24.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : -1.0,
+					"zaxis" : 2.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 3.0,
+						"y" : 25.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 9.0,
+						"y" : -21.0,
+						"z" : 24.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 19.0,
+						"y" : 2.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -10.0,
+						"y" : -24.0,
+						"z" : 24.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"color" : "CF11D2",
+					"controller" : 
+					{
+						"active" : false,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1223.0
+							},
+							
+							{
+								"id" : 1224.0
+							}
+						],
+						"id" : 1226.0,
+						"mode" : 0.0
+					},
+					"pos" : 
+					{
+						"x" : 11.0,
+						"y" : -21.0,
+						"z" : 23.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : 1.0,
+					"zaxis" : -2.0
+				},
+				
+				{
+					"color" : "CF11D2",
+					"controller" : 
+					{
+						"active" : false,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1224.0
+							}
+						],
+						"id" : 1225.0,
+						"mode" : 0.0
+					},
+					"pos" : 
+					{
+						"x" : 11.0,
+						"y" : -23.0,
+						"z" : 23.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : 1.0,
+					"zaxis" : -2.0
+				},
+				
+				{
+					"color" : "CF11D2",
+					"controller" : 
+					{
+						"active" : false,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1227.0
+							},
+							
+							{
+								"id" : 1218.0
+							}
+						],
+						"id" : 1224.0,
+						"mode" : 5.0
+					},
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : -23.0,
+						"z" : 23.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : 1.0,
+					"zaxis" : -2.0
+				},
+				
+				{
+					"color" : "CF11D2",
+					"controller" : 
+					{
+						"active" : false,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1225.0
+							},
+							
+							{
+								"id" : 1224.0
+							}
+						],
+						"id" : 1223.0,
+						"mode" : 0.0
+					},
+					"pos" : 
+					{
+						"x" : 11.0,
+						"y" : -22.0,
+						"z" : 23.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : 1.0,
+					"zaxis" : -2.0
+				},
+				
+				{
+					"color" : "D02525",
+					"controller" : 
+					{
+						"active" : true,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1220.0
+							}
+						],
+						"id" : 1222.0,
+						"mode" : 1.0
+					},
+					"pos" : 
+					{
+						"x" : 11.0,
+						"y" : -23.0,
+						"z" : 24.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : -2.0,
+					"zaxis" : -1.0
+				},
+				
+				{
+					"color" : "D02525",
+					"controller" : 
+					{
+						"active" : true,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1218.0
+							},
+							
+							{
+								"id" : 1222.0
+							}
+						],
+						"id" : 1221.0,
+						"mode" : 3.0
+					},
+					"pos" : 
+					{
+						"x" : 12.0,
+						"y" : -23.0,
+						"z" : 24.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : -2.0,
+					"zaxis" : -1.0
+				},
+				
+				{
+					"color" : "560202",
+					"controller" : 
+					{
+						"active" : false,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1218.0
+							},
+							
+							{
+								"id" : 1221.0
+							}
+						],
+						"id" : 1220.0,
+						"seconds" : 7.0,
+						"ticks" : 40.0
+					},
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : -22.0,
+						"z" : 24.0
+					},
+					"shapeId" : "8f7fd0e7-c46e-4944-a414-7ce2437bb30f",
+					"xaxis" : -2.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"color" : "E2DB13",
+					"controller" : 
+					{
+						"active" : true,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1217.0
+							}
+						],
+						"id" : 1217.0,
+						"mode" : 2.0
+					},
+					"pos" : 
+					{
+						"x" : 11.0,
+						"y" : -22.0,
+						"z" : 24.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : -1.0,
+					"zaxis" : 2.0
+				},
+				
+				{
+					"color" : "0A3EE2",
+					"controller" : 
+					{
+						"active" : false,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1217.0
+							},
+							
+							{
+								"id" : 1230.0
+							}
+						],
+						"id" : 1218.0,
+						"mode" : 0.0
+					},
+					"pos" : 
+					{
+						"x" : 12.0,
+						"y" : -21.0,
+						"z" : 24.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : -2.0,
+					"zaxis" : -1.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 12.0,
+						"y" : 20.0,
+						"z" : 1.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : 2.0,
+						"y" : -20.0,
+						"z" : 23.0
+					},
+					"shapeId" : "760e0379-d643-428e-9ae4-5ff1079dfebe",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 12.0,
+						"y" : 20.0,
+						"z" : 1.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -14.0,
+						"y" : -20.0,
+						"z" : 23.0
+					},
+					"shapeId" : "760e0379-d643-428e-9ae4-5ff1079dfebe",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 3.0,
+						"z" : 14.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 11.0,
+						"y" : -24.0,
+						"z" : 9.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"color" : "EEAF5C",
+					"controller" : 
+					{
+						"color" : "EEAF5C",
+						"coneAngle" : 0.0,
+						"id" : 1215.0,
+						"luminance" : 50.0
+					},
+					"pos" : 
+					{
+						"x" : -2.0,
+						"y" : -12.0,
+						"z" : 24.0
+					},
+					"shapeId" : "7118a3bc-b40f-43de-90be-51065b75cbea",
+					"xaxis" : 1.0,
+					"zaxis" : 2.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 4.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : -24.0,
+						"z" : 10.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 21.0,
+						"y" : 28.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -10.0,
+						"y" : -24.0,
+						"z" : 9.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 2.0,
+						"z" : 2.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -11.0,
+						"y" : -24.0,
+						"z" : 9.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 2.0,
+						"z" : 16.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -12.0,
+						"y" : -24.0,
+						"z" : 9.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 3.0,
+						"z" : 2.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -11.0,
+						"y" : -24.0,
+						"z" : 23.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 20.0,
+						"y" : 28.0,
+						"z" : 1.0
+					},
+					"color" : "EEAF5C",
+					"pos" : 
+					{
+						"x" : -10.0,
+						"y" : -24.0,
+						"z" : 10.0
+					},
+					"shapeId" : "febce8a6-6c05-4e5d-803b-dfa930286944",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 3.0,
+						"z" : 11.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -11.0,
+						"y" : -24.0,
+						"z" : 12.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 3.0,
+						"z" : 1.0
+					},
+					"color" : "EEAF5C",
+					"pos" : 
+					{
+						"x" : -11.0,
+						"y" : -24.0,
+						"z" : 11.0
+					},
+					"shapeId" : "1fc74a28-addb-451a-878d-c3c605d63811",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 3.0,
+						"y" : 1.0,
+						"z" : 14.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -14.0,
+						"y" : -22.0,
+						"z" : 11.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 3.0,
+						"z" : 1.0
+					},
+					"color" : "EEAF5C",
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : -24.0,
+						"z" : 11.0
+					},
+					"shapeId" : "1fc74a28-addb-451a-878d-c3c605d63811",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 3.0,
+						"z" : 11.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : -24.0,
+						"z" : 12.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"color" : "520653",
+					"controller" : 
+					{
+						"active" : true,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1226.0
+							}
+						],
+						"id" : 1227.0,
+						"seconds" : 0.0,
+						"ticks" : 21.0
+					},
+					"pos" : 
+					{
+						"x" : 11.0,
+						"y" : -21.0,
+						"z" : 23.0
+					},
+					"shapeId" : "8f7fd0e7-c46e-4944-a414-7ce2437bb30f",
+					"xaxis" : -1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 20.0,
+						"z" : 1.0
+					},
+					"color" : "EEAF5C",
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : -20.0,
+						"z" : 10.0
+					},
+					"shapeId" : "febce8a6-6c05-4e5d-803b-dfa930286944",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 20.0,
+						"z" : 1.0
+					},
+					"color" : "EEAF5C",
+					"pos" : 
+					{
+						"x" : -14.0,
+						"y" : -20.0,
+						"z" : 10.0
+					},
+					"shapeId" : "febce8a6-6c05-4e5d-803b-dfa930286944",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 20.0,
+						"y" : 4.0,
+						"z" : 1.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -10.0,
+						"y" : -24.0,
+						"z" : 23.0
+					},
+					"shapeId" : "760e0379-d643-428e-9ae4-5ff1079dfebe",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 16.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -10.0,
+						"y" : -22.0,
+						"z" : 24.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -14.0,
+						"y" : -21.0,
+						"z" : 23.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : -21.0,
+						"z" : 23.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 1.0,
+						"z" : 11.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : -21.0,
+						"z" : 12.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "EEAF5C",
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : -21.0,
+						"z" : 11.0
+					},
+					"shapeId" : "1fc74a28-addb-451a-878d-c3c605d63811",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "EEAF5C",
+					"pos" : 
+					{
+						"x" : -14.0,
+						"y" : -21.0,
+						"z" : 11.0
+					},
+					"shapeId" : "1fc74a28-addb-451a-878d-c3c605d63811",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 1.0,
+						"z" : 11.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -14.0,
+						"y" : -21.0,
+						"z" : 12.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 3.0,
+						"z" : 11.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : 1.0,
+						"z" : 12.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 2.0,
+						"y" : 23.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 12.0,
+						"y" : -21.0,
+						"z" : 24.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 3.0,
+						"y" : 26.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 6.0,
+						"y" : -22.0,
+						"z" : 24.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 2.0,
+						"y" : 4.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : 0.0,
+						"z" : 23.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 24.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 11.0,
+						"y" : -20.0,
+						"z" : 9.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 2.0,
+						"y" : 4.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : 0.0,
+						"z" : 10.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 3.0,
+						"z" : 12.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 11.0,
+						"y" : 1.0,
+						"z" : 11.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 2.0,
+						"y" : 2.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 12.0,
+						"y" : 0.0,
+						"z" : 10.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 8.0,
+						"z" : 1.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -2.0,
+						"y" : -20.0,
+						"z" : 23.0
+					},
+					"shapeId" : "760e0379-d643-428e-9ae4-5ff1079dfebe",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 3.0,
+						"y" : 1.0,
+						"z" : 2.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 11.0,
+						"y" : -21.0,
+						"z" : 9.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 2.0,
+						"y" : 1.0,
+						"z" : 16.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 12.0,
+						"y" : -22.0,
+						"z" : 9.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 8.0,
+						"z" : 1.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -2.0,
+						"y" : -8.0,
+						"z" : 23.0
+					},
+					"shapeId" : "760e0379-d643-428e-9ae4-5ff1079dfebe",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 1.0,
+						"z" : 11.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -14.0,
+						"y" : 0.0,
+						"z" : 12.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 3.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "EEAF5C",
+					"pos" : 
+					{
+						"x" : -14.0,
+						"y" : 0.0,
+						"z" : 11.0
+					},
+					"shapeId" : "1fc74a28-addb-451a-878d-c3c605d63811",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 2.0,
+						"z" : 2.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -11.0,
+						"y" : 2.0,
+						"z" : 9.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"color" : "DF7F01",
+					"controller" : 
+					{
+						"active" : false,
+						"controllers" : 
+						[
+							
+							{
+								"id" : 1235.0
+							}
+						],
+						"id" : 1236.0,
+						"mode" : 0.0
+					},
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : -22.0,
+						"z" : 24.0
+					},
+					"shapeId" : "9f0f56e8-2c31-4d83-996c-d00a9b296c3f",
+					"xaxis" : -1.0,
+					"zaxis" : 2.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -14.0,
+						"y" : 0.0,
+						"z" : 23.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 1.0,
+						"z" : 11.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : 0.0,
+						"z" : 12.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 2.0,
+						"y" : 2.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 12.0,
+						"y" : 0.0,
+						"z" : 23.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 4.0,
+						"z" : 1.0
+					},
+					"color" : "EEAF5C",
+					"pos" : 
+					{
+						"x" : 10.0,
+						"y" : 0.0,
+						"z" : 11.0
+					},
+					"shapeId" : "1fc74a28-addb-451a-878d-c3c605d63811",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 2.0,
+						"z" : 16.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -12.0,
+						"y" : 2.0,
+						"z" : 9.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 24.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -14.0,
+						"y" : -22.0,
+						"z" : 9.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 2.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -14.0,
+						"y" : -22.0,
+						"z" : 10.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 4.0,
+						"z" : 1.0
+					},
+					"color" : "EEAF5C",
+					"pos" : 
+					{
+						"x" : -11.0,
+						"y" : 0.0,
+						"z" : 11.0
+					},
+					"shapeId" : "1fc74a28-addb-451a-878d-c3c605d63811",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 2.0,
+						"z" : 2.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -11.0,
+						"y" : 2.0,
+						"z" : 23.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -14.0,
+						"y" : 0.0,
+						"z" : 10.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 3.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "EEAF5C",
+					"pos" : 
+					{
+						"x" : 11.0,
+						"y" : 0.0,
+						"z" : 11.0
+					},
+					"shapeId" : "1fc74a28-addb-451a-878d-c3c605d63811",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 3.0,
+						"z" : 11.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -11.0,
+						"y" : 1.0,
+						"z" : 12.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 20.0,
+						"y" : 4.0,
+						"z" : 1.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -10.0,
+						"y" : 0.0,
+						"z" : 23.0
+					},
+					"shapeId" : "760e0379-d643-428e-9ae4-5ff1079dfebe",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 16.0,
+						"y" : 2.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -10.0,
+						"y" : 2.0,
+						"z" : 24.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 2.0,
+						"y" : 22.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 12.0,
+						"y" : -20.0,
+						"z" : 9.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 3.0,
+						"y" : 1.0,
+						"z" : 14.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -14.0,
+						"y" : 1.0,
+						"z" : 10.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -11.0,
+						"y" : 1.0,
+						"z" : 10.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -11.0,
+						"y" : 1.0,
+						"z" : 23.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 2.0,
+						"y" : 1.0,
+						"z" : 12.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 12.0,
+						"y" : 1.0,
+						"z" : 11.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : 9.0,
+						"y" : -24.0,
+						"z" : 24.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				}
+			],
+			"type" : 1.0
+		}
+	],
+	"dependencies" : 
+	[
+		
+		{
+			"contentId" : "10f031ed-4043-4c47-9404-d3cdf013c664",
+			"name" : "Backrooms in SM",
+			"shapeIds" : 
+			[
+				"7118a3bc-b40f-43de-90be-51065b75cbea",
+				"760e0379-d643-428e-9ae4-5ff1079dfebe",
+				"e485d4c1-666d-410f-8102-067c5cac5beb"
+			],
+			"steamFileId" : 0.0
+		}
+	],
+	"version" : 4.0
+}
