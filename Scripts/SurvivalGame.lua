@@ -47,7 +47,7 @@ function SurvivalGame.server_onCreate( self )
 		self.sv.saved = {}
 		self.sv.saved.data = self.data
 		printf( "Seed: %.0f", self.sv.saved.data.seed )
-		self.sv.saved.overworld = sm.world.createWorld( "$CONTENT_DATA/Scripts/worlds/Overworld.lua", "Overworld", { dev = self.sv.saved.data.dev }, self.sv.saved.data.seed )
+		self.sv.saved.overworld = sm.world.createWorld( "$CONTENT_DATA/Scripts/worlds/Overworld.lua", "Overworld", { dev = self.sv.saved.data.dev }, self.sv.saved.data.seed ) --SMBACKROOMS
 		self.storage:save( self.sv.saved )
 	end
 	self.data = nil
@@ -174,7 +174,7 @@ function SurvivalGame.client_onCreate( self )
 	if g_survivalDev then
 		self.network:sendToServer( "sv_setLimitedInventory", false )
 	end
---[[
+--[[ SMBACKROOMS
 	-- Music effect
 	g_survivalMusic = sm.effect.createEffect( "SurvivalMusic" )
 	assert(g_survivalMusic)
@@ -249,6 +249,7 @@ function SurvivalGame.bindChatCommands( self )
 		sm.game.bindChatCommand( "/printtilevalues",  {}, "cl_onChatCommand", "Print all tile values at player position" )
 		sm.game.bindChatCommand( "/reloadcell", {{ "int", "x", true }, { "int", "y", true }}, "cl_onChatCommand", "Reload cells at self or {x,y}" )
 		sm.game.bindChatCommand( "/tutorialstartkit", {}, "cl_onChatCommand", "Spawn a starter kit for building a scrap car" )
+		sm.game.bindChatCommand( "/delete", {}, "cl_onChatCommand", "Delete object player is looking at" )	--SMBACKROOMS
 
 
 
@@ -551,6 +552,19 @@ function SurvivalGame.cl_onChatCommand( self, params )
 			}
 			self.network:sendToServer( "sv_importCreation", importParams )
 		end
+	elseif params[1] == "/delete" then	--SMBACKROOMS START
+		local rayCastValid, rayCastResult = sm.localPlayer.getRaycast( 100 )
+		if rayCastValid and rayCastResult.type == "body" then
+			local body = rayCastResult:getBody()
+			local shapes = body:getCreationShapes()
+			for k, shape in pairs( shapes ) do
+				if sm.item.isPart( shape.uuid ) then
+					self.network:sendToServer( "sv_yeetPart", shape )
+				else
+					self.network:sendToServer( "sv_yeetShape", shape )
+				end
+			end
+		end --SMBACKROOMS END
 	elseif params[1] == "/noaggro" then
 		if type( params[2] ) == "boolean" then
 			self.network:sendToServer( "sv_n_switchAggroMode", { aggroMode = not params[2] } )
@@ -577,6 +591,16 @@ function SurvivalGame.cl_onChatCommand( self, params )
 		self.network:sendToServer( "sv_onChatCommand", params )
 	end
 end
+
+--SMBACKROOMS START
+function SurvivalGame.sv_yeetPart( self, shape )
+    shape:destroyPart( 0 )
+end
+
+function SurvivalGame.sv_yeetShape( self, shape )
+	shape:destroyShape( 0 )
+end
+--SMBACKROOMS END
 
 function SurvivalGame.sv_reloadCell( self, params, player )
 	print( "sv_reloadCell Reloading cell at {" .. params.x .. " : " .. params.y .. "}" )
@@ -629,7 +653,7 @@ function SurvivalGame.sv_giveItem( self, params )
 	sm.container.collect( params.player:getInventory(), params.item, params.quantity, false )
 	sm.container.endTransaction()
 end
---[[
+--[[ SMBACKROOMS
 function SurvivalGame.cl_n_onJoined( self, params )
 	self.cl.playIntroCinematic = params.newPlayer
 end
