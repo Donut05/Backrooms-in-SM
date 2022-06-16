@@ -15,6 +15,7 @@ Level0World.worldBorder = false
 
 function Level0World.server_onCreate( self )
 	BaseWorld.server_onCreate( self )
+	dofile("$CONTENT_DATA/Scripts/terrain/blueprints_level0.lua")
 end
 
 function Level0World.client_onCreate( self )
