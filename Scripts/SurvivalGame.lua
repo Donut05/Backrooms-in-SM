@@ -38,6 +38,9 @@ local IntroFadeDuration = 1.1
 local IntroEndFadeDuration = 1.1
 local IntroFadeTimeout = 5.0
 
+function SurvivalGame.sv_callTheFunkyStuff(self,args)
+	sm.event.sendToWorld(self.sv.saved.overworld,"sv_gotoLevel", { position = args.position, world = self.sv.saved.levels[args.level] })
+end
 function SurvivalGame.server_onCreate( self )
 	print( "SurvivalGame.server_onCreate" )
 	self.sv = {}
@@ -48,6 +51,8 @@ function SurvivalGame.server_onCreate( self )
 		self.sv.saved.data = self.data
 		printf( "Seed: %.0f", self.sv.saved.data.seed )
 		self.sv.saved.overworld = sm.world.createWorld( "$CONTENT_DATA/Scripts/worlds/Overworld.lua", "Overworld", { dev = self.sv.saved.data.dev }, self.sv.saved.data.seed ) --SMBACKROOMS
+		self.sv.saved.levels = {}
+		self.sv.saved.levels["0"] = sm.world.createWorld("$CONTENT_DATA/Scripts/worlds/Level0World.lua","Level0World")
 		self.storage:save( self.sv.saved )
 	end
 	self.data = nil
@@ -213,6 +218,7 @@ function SurvivalGame.bindChatCommands( self )
 		sm.game.bindChatCommand( "/timeofday", { { "number", "timeOfDay", true } }, "cl_onChatCommand", "Sets the time of the day as a fraction (0.5=mid day)" )
 		sm.game.bindChatCommand( "/timeprogress", { { "bool", "enabled", true } }, "cl_onChatCommand", "Enables or disables time progress" )
 		sm.game.bindChatCommand( "/day", {}, "cl_onChatCommand", "Disable time progression and set time to daytime" )
+		sm.game.bindChatCommand( "/level", { { "string", "level", false } }, "cl_onChatCommand", "Go to level <level>." ) --SMBACKROOMS
 		sm.game.bindChatCommand( "/spawn", { { "string", "unitName", true }, { "int", "amount", true } }, "cl_onChatCommand", "Spawn a unit: 'woc', 'tapebot', 'totebot', 'haybot'" )
 		sm.game.bindChatCommand( "/harvestable", { { "string", "harvestableName", true } }, "cl_onChatCommand", "Create a harvestable: 'tree', 'stone'" )
 		sm.game.bindChatCommand( "/cleardebug", {}, "cl_onChatCommand", "Clear debug draw objects" )
@@ -442,8 +448,12 @@ function SurvivalGame.cl_onChatCommand( self, params )
 	elseif params[1] == "/day" then
 		self.network:sendToServer( "sv_setTimeOfDay", 0.5 )
 		self.network:sendToServer( "sv_setTimeProgress", false )
+	elseif params[1] == "/level" then --SMBACKROOMS
+		local position = (sm.localPlayer.getPlayer().character.worldPosition)--+sm.localPlayer.getDirection()*5
+		self.network:sendToServer( "sv_callTheFunkyStuff",{ position = position, level = params[2] } )
 	elseif params[1] == "/die" then
 		self.network:sendToServer( "sv_killPlayer", { player = sm.localPlayer.getPlayer() })
+		
 
 
 
@@ -657,15 +667,19 @@ end
 function SurvivalGame.cl_n_onJoined( self, params )
 	self.cl.playIntroCinematic = params.newPlayer
 end
-
+--]]
 function SurvivalGame.client_onLoadingScreenLifted( self )
+	--[[
 	self.network:sendToServer( "sv_n_loadingScreenLifted" )
 	if self.cl.playIntroCinematic then
 		local callbacks = {}
 		callbacks[#callbacks + 1] = { fn = "cl_onCinematicEvent", params = { cinematicName = "cinematic.survivalstart01" }, ref = self }
 		g_effectManager:cl_playNamedCinematic( "cinematic.survivalstart01", callbacks )
 	end
+	--]] --SMBACKROOMS (this is how a real master does it)
+	print("donut lord (reference??!?!?!?)")
 end
+--[[
 
 function SurvivalGame.sv_n_loadingScreenLifted( self, _, player )
 	if not g_survivalDev then
@@ -888,7 +902,7 @@ function SurvivalGame.server_onPlayerJoined( self, player, newPlayer )
 			sm.world.loadWorld( self.sv.saved.overworld )
 		end
 		self.sv.saved.overworld:loadCell( math.floor( spawnPoint.x/64 ), math.floor( spawnPoint.y/64 ), player, "sv_createNewPlayer" )
-		self.network:sendToClient( player, "cl_n_onJoined", { newPlayer = newPlayer } )
+		--self.network:sendToClient( player, "cl_n_onJoined", { newPlayer = newPlayer } ) --SMBACKROOMS (DONUT YOU STUPID MORON WHY TF WOULD YOU REMOVE A FUNCTION WITHOUT CHECKING IF IT'S REFERENCED ANYWHERE I HATE YOU SO MUCH YOU STUPID GIT THIS IS SO ANNOYING AND I HATE YOU SO MUCH FOR DOING THIS WHY WOULD YOU DO THIS YOU TWAT FUCK YOU)
 	else
 		local inventory = player:getInventory()
 
