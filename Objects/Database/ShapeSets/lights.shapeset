@@ -1,46 +1,51 @@
 {
    "partList" : [
       {
-			"uuid": "7118a3bc-b40f-43de-90be-51065b75cbea",
-			"name": "obj_light_fluorescentsquare",
-			"renderable": {
-				"lodList": [
-					{
-						"subMeshList": [
-							{
-								"textureList": [
-									"$SURVIVAL_DATA/Objects/Textures/lights/obj_light_fluorescentlamp_dif.tga",
-									"$SURVIVAL_DATA/Objects/Textures/lights/obj_light_fluorescentlamp_asg.tga",
-									"$SURVIVAL_DATA/Objects/Textures/lights/obj_light_fluorescentlamp_nor.tga"
-								],
-								"material": "PoseAnimDifAsgNor"
-							}
-						],
-						"mesh": "$CONTENT_DATA/Objects/Mesh/lights/obj_light_fluorescentsquare_on.obj",
-						"pose0": "$CONTENT_DATA/Objects/Mesh/lights/obj_light_fluorescentsquare_off.obj"
-					}
-				]
-			},
-			"color": "c36512",
-			"box": {
-				"x": 4,
-				"y": 1,
-				"z": 4
-			},
-			"spotlight": {
-				"defaultLuminance": 50,
-				"effect": "FluorescentLight"
-			},
-			"rotationSet": "PropYmZX",
-			"sticky": "-Y+Z-Z+X-X",
-			"physicsMaterial": "Metal",
-			"ratings": {
-				"density": 5,
-				"durability": 4,
-				"friction": 4,
-				"buoyancy": 3
-			},
-			"flammable": false
-		}
+         "box" : {
+            "x" : 4,
+            "y" : 1,
+            "z" : 4
+         },
+         "color" : "c36512",
+         "flammable" : false,
+         "name" : "obj_light_fluorescentsquare",
+         "physicsMaterial" : "Metal",
+         "ratings" : {
+            "buoyancy" : 3,
+            "density" : 5,
+            "durability" : 4,
+            "friction" : 4
+         },
+         "renderable" : {
+            "lodList" : [
+               {
+                  "mesh" : "$CONTENT_DATA/Objects/Mesh/lights/obj_light_fluorescentsquare_on.obj",
+                  "pose0" : "$CONTENT_DATA/Objects/Mesh/lights/obj_light_fluorescentsquare_off.obj",
+                  "subMeshList" : [
+                     {
+                        "material" : "PoseAnimDifAsgNor",
+                        "textureList" : [
+                           "$SURVIVAL_DATA/Objects/Textures/lights/obj_light_fluorescentlamp_dif.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/lights/obj_light_fluorescentlamp_asg.tga",
+                           "$SURVIVAL_DATA/Objects/Textures/lights/obj_light_fluorescentlamp_nor.tga"
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         "rotationSet" : "PropYmZX",
+         "spotlight" : {
+            "defaultLuminance" : 50,
+            "direction" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "effect" : "FluorescentLight"
+         },
+         "sticky" : "-Y+Z-Z+X-X",
+         "uuid" : "7118a3bc-b40f-43de-90be-51065b75cbea"
+      }
    ]
 }

@@ -89,7 +89,10 @@
         "RespawnFromNodeOnCellReloaded",
         "projectile_potato",
         "yaw",
-        "g_survivalMusicWorld"
+        "g_survivalMusicWorld",
+        "RotateLocal",
+        "InsideCellBounds",
+        "GetRotationQuat"
     ],
     "Lua.diagnostics.disable": [
         "undefined-doc-class",
