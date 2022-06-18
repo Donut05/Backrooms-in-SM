@@ -7,7 +7,7 @@ dofile( "$SURVIVAL_DATA/Scripts/game/managers/PackingStationManager.lua" )
 
 Overworld = class( BaseWorld )
 
-Overworld.terrainScript = "$SURVIVAL_DATA/Scripts/terrain/terrain_overworld.lua"
+Overworld.terrainScript = "$GAME_DATA/Scripts/terrain/terrain_flat.lua" --SMBACKROOMS For faster loading times and no annoying ship ambience
 Overworld.groundMaterialSet = "$GAME_DATA/Terrain/Materials/gnd_standard_materialset.json"
 Overworld.enableSurface = true
 Overworld.enableAssets = true
@@ -28,7 +28,7 @@ function  Overworld.sv_gotoLevel( self, args ) -- SMBACKROOMS
 	print(args)
 	hookuuid = sm.uuid.generateRandom()
 	local portal = sm.portal.createPortal(sm.vec3.new(10000,10000,10000))
-	portal:setOpeningA(args.position, sm.vec3.getRotation(sm.vec3.new(0,0,1),sm.vec3.new(0,0,1)))
+	portal:setOpeningA((args.position + sm.vec3.new(0, 0, 0.5)), sm.vec3.getRotation(sm.vec3.new(0,0,1),sm.vec3.new(0,0,1)))
 	portal:setOpeningB(sm.vec3.new(0,0,0), sm.vec3.getRotation(sm.vec3.new(0,0,1),sm.vec3.new(0,0,1)))
 	sm.portal.addWorldPortalHook(args.world,tostring(hookuuid),portal)
 	print(tostring(hookuuid))

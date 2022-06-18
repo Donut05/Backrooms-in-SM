@@ -1,6 +1,6 @@
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/BeaconManager.lua" )
 
-
+dofile( "$CONTENT_DATA/Scripts/terrain/lvl0_gen.lua" )
 
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/EffectManager.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/ElevatorManager.lua"  )
@@ -256,7 +256,7 @@ function SurvivalGame.bindChatCommands( self )
 		sm.game.bindChatCommand( "/reloadcell", {{ "int", "x", true }, { "int", "y", true }}, "cl_onChatCommand", "Reload cells at self or {x,y}" )
 		sm.game.bindChatCommand( "/tutorialstartkit", {}, "cl_onChatCommand", "Spawn a starter kit for building a scrap car" )
 		sm.game.bindChatCommand( "/delete", {}, "cl_onChatCommand", "Delete object player is looking at" )	--SMBACKROOMS
-
+		sm.game.bindChatCommand( "/to00", {}, "cl_onChatCommand", "Because fuck you, that's why" )	--SMBACKROOMS
 
 
 
@@ -574,7 +574,10 @@ function SurvivalGame.cl_onChatCommand( self, params )
 					self.network:sendToServer( "sv_yeetShape", shape )
 				end
 			end
-		end --SMBACKROOMS END
+		end
+	elseif params[1] == "/to00" then
+		local player = ( sm.localPlayer.getPlayer() )
+		self.network:sendToServer( "sv_fuckmyballs", player )	--SMBACKROOMS END
 	elseif params[1] == "/noaggro" then
 		if type( params[2] ) == "boolean" then
 			self.network:sendToServer( "sv_n_switchAggroMode", { aggroMode = not params[2] } )
@@ -603,12 +606,29 @@ function SurvivalGame.cl_onChatCommand( self, params )
 end
 
 --SMBACKROOMS START
+function SurvivalGame.cl_00Fard( self )
+	local player = ( sm.localPlayer.getPlayer() )
+	for _,body in pairs(sm.body.getAllBodies()) do
+		for _,character in pairs(body:getAllSeatedCharacter()) do
+			if character == sm.localPlayer.getPlayer().character then
+				sm.body.getCreationsFromBodies( body )
+			else
+				self.network:sendToServer( "sv_fuckmyballs", player )
+			end
+		end
+	end
+end
+
 function SurvivalGame.sv_yeetPart( self, shape )
     shape:destroyPart( 0 )
 end
 
 function SurvivalGame.sv_yeetShape( self, shape )
 	shape:destroyShape( 0 )
+end
+
+function SurvivalGame.sv_fuckmyballs( self, player )
+	player:getCharacter():setWorldPosition( sm.vec3.new( 0, 0, 1 ) )
 end
 --SMBACKROOMS END
 
@@ -663,11 +683,12 @@ function SurvivalGame.sv_giveItem( self, params )
 	sm.container.collect( params.player:getInventory(), params.item, params.quantity, false )
 	sm.container.endTransaction()
 end
---[[ SMBACKROOMS
+
 function SurvivalGame.cl_n_onJoined( self, params )
-	self.cl.playIntroCinematic = params.newPlayer
+--	self.cl.playIntroCinematic = params.newPlayer SMBACKROOMS
 end
---]]
+
+
 function SurvivalGame.client_onLoadingScreenLifted( self )
 	--[[
 	self.network:sendToServer( "sv_n_loadingScreenLifted" )
@@ -902,7 +923,9 @@ function SurvivalGame.server_onPlayerJoined( self, player, newPlayer )
 			sm.world.loadWorld( self.sv.saved.overworld )
 		end
 		self.sv.saved.overworld:loadCell( math.floor( spawnPoint.x/64 ), math.floor( spawnPoint.y/64 ), player, "sv_createNewPlayer" )
-		--self.network:sendToClient( player, "cl_n_onJoined", { newPlayer = newPlayer } ) --SMBACKROOMS (DONUT YOU STUPID MORON WHY TF WOULD YOU REMOVE A FUNCTION WITHOUT CHECKING IF IT'S REFERENCED ANYWHERE I HATE YOU SO MUCH YOU STUPID GIT THIS IS SO ANNOYING AND I HATE YOU SO MUCH FOR DOING THIS WHY WOULD YOU DO THIS YOU TWAT FUCK YOU)
+		self.network:sendToClient( player, "cl_n_onJoined", { newPlayer = newPlayer } )
+		self.network:sendToClient( "cl_00Fard", { newPlayer = newPlayer } )	--SMBACKROOMS
+		Gen0.Server_GenInit()
 	else
 		local inventory = player:getInventory()
 
