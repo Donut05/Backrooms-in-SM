@@ -1,0 +1,195 @@
+
+{
+	"bodies" : 
+	[
+		
+		{
+			"childs" : 
+			[
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 2.0,
+						"z" : 11.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -16.0,
+						"y" : 13.0,
+						"z" : 9.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 3.0,
+						"y" : 1.0,
+						"z" : 11.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -16.0,
+						"y" : 12.0,
+						"z" : 9.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 2.0,
+						"y" : 2.0,
+						"z" : 12.0
+					},
+					"color" : "8D8F89",
+					"pos" : 
+					{
+						"x" : -15.0,
+						"y" : 13.0,
+						"z" : 8.0
+					},
+					"shapeId" : "f5ceb7e3-5576-41d2-82d2-29860cf6e20e",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 4.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "CD9D71",
+					"pos" : 
+					{
+						"x" : -16.0,
+						"y" : 12.0,
+						"z" : 8.0
+					},
+					"shapeId" : "1fc74a28-addb-451a-878d-c3c605d63811",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 3.0,
+						"z" : 1.0
+					},
+					"color" : "CD9D71",
+					"pos" : 
+					{
+						"x" : -13.0,
+						"y" : 13.0,
+						"z" : 8.0
+					},
+					"shapeId" : "1fc74a28-addb-451a-878d-c3c605d63811",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 3.0,
+						"y" : 1.0,
+						"z" : 1.0
+					},
+					"color" : "CD9D71",
+					"pos" : 
+					{
+						"x" : -16.0,
+						"y" : 15.0,
+						"z" : 8.0
+					},
+					"shapeId" : "1fc74a28-addb-451a-878d-c3c605d63811",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 2.0,
+						"z" : 1.0
+					},
+					"color" : "CD9D71",
+					"pos" : 
+					{
+						"x" : -16.0,
+						"y" : 13.0,
+						"z" : 8.0
+					},
+					"shapeId" : "1fc74a28-addb-451a-878d-c3c605d63811",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 1.0,
+						"y" : 4.0,
+						"z" : 11.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -13.0,
+						"y" : 12.0,
+						"z" : 9.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				},
+				
+				{
+					"bounds" : 
+					{
+						"x" : 3.0,
+						"y" : 1.0,
+						"z" : 11.0
+					},
+					"color" : "FFFFFF",
+					"pos" : 
+					{
+						"x" : -16.0,
+						"y" : 15.0,
+						"z" : 9.0
+					},
+					"shapeId" : "e485d4c1-666d-410f-8102-067c5cac5beb",
+					"xaxis" : 1.0,
+					"zaxis" : 3.0
+				}
+			],
+			"type" : 0.0
+		}
+	],
+	"dependencies" : 
+	[
+		
+		{
+			"contentId" : "10f031ed-4043-4c47-9404-d3cdf013c664",
+			"name" : "Backrooms in SM",
+			"shapeIds" : [ "e485d4c1-666d-410f-8102-067c5cac5beb" ],
+			"steamFileId" : 0.0
+		}
+	],
+	"version" : 4.0
+}
