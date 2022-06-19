@@ -1,6 +1,6 @@
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/BeaconManager.lua" )
 
-dofile( "$CONTENT_DATA/Scripts/terrain/lvl0_gen.lua" )
+
 
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/EffectManager.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/ElevatorManager.lua"  )
@@ -608,15 +608,7 @@ end
 --SMBACKROOMS START
 function SurvivalGame.cl_00Fard( self )
 	local player = ( sm.localPlayer.getPlayer() )
-	for _,body in pairs(sm.body.getAllBodies()) do
-		for _,character in pairs(body:getAllSeatedCharacter()) do
-			if character == sm.localPlayer.getPlayer().character then
-				sm.body.getCreationsFromBodies( body )
-			else
-				self.network:sendToServer( "sv_fuckmyballs", player )
-			end
-		end
-	end
+	self.network:sendToServer( "sv_fuckmyballs", player )
 end
 
 function SurvivalGame.sv_yeetPart( self, shape )
@@ -924,8 +916,6 @@ function SurvivalGame.server_onPlayerJoined( self, player, newPlayer )
 		end
 		self.sv.saved.overworld:loadCell( math.floor( spawnPoint.x/64 ), math.floor( spawnPoint.y/64 ), player, "sv_createNewPlayer" )
 		self.network:sendToClient( player, "cl_n_onJoined", { newPlayer = newPlayer } )
-		self.network:sendToClient( "cl_00Fard", { newPlayer = newPlayer } )	--SMBACKROOMS
-		Gen0.Server_GenInit()
 	else
 		local inventory = player:getInventory()
 
