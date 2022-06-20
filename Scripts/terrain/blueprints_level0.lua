@@ -1,3 +1,7 @@
+--NOTE: We're preparing the void with this script.
+--We will be loading LEVEL 0 from the world script when the world is ready.
+--r4ndytaylor69 20.06.22
+
 function Init( world, generatorIndex )
     print("frick you lol")
 end
@@ -76,5 +80,7 @@ function GetNodesForCell( cellX, cellY )
 end
 
 function GetTilePath( uid )
+    uid = sm.uuid.new("PLEASE INSERT EMPTY TILE UUID HERE.")
+    --r4ndytaylor69, 20.06.22
     print("my uuid is 696969-6969-6969-696969 😩😩")
 end
