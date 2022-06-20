@@ -7,7 +7,7 @@ function Create( xMin, xMax, yMin, yMax, seed, data )
 end
 
 function Load()
-    print("load you bloody dimwit")
+    print("load you bloody dimwit") --this shit be bussin fr
     return true
 end
 
