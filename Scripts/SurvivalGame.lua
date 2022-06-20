@@ -38,6 +38,9 @@ local IntroFadeDuration = 1.1
 local IntroEndFadeDuration = 1.1
 local IntroFadeTimeout = 5.0
 
+function SurvivalGame.sv_callTheFunkyStuff(self,args)
+	sm.event.sendToWorld(self.sv.saved.overworld,"sv_gotoLevel", { position = args.position, world = self.sv.saved.levels[args.level] })
+end
 function SurvivalGame.server_onCreate( self )
 	print( "SurvivalGame.server_onCreate" )
 	self.sv = {}
@@ -47,7 +50,9 @@ function SurvivalGame.server_onCreate( self )
 		self.sv.saved = {}
 		self.sv.saved.data = self.data
 		printf( "Seed: %.0f", self.sv.saved.data.seed )
-		self.sv.saved.overworld = sm.world.createWorld( "$CONTENT_DATA/Scripts/worlds/Overworld.lua", "Overworld", { dev = self.sv.saved.data.dev }, self.sv.saved.data.seed )
+		self.sv.saved.overworld = sm.world.createWorld( "$CONTENT_DATA/Scripts/worlds/Overworld.lua", "Overworld", { dev = self.sv.saved.data.dev }, self.sv.saved.data.seed ) --SMBACKROOMS
+		self.sv.saved.levels = {}
+		self.sv.saved.levels["0"] = sm.world.createWorld("$CONTENT_DATA/Scripts/worlds/Level0World.lua","Level0World")
 		self.storage:save( self.sv.saved )
 	end
 	self.data = nil
@@ -170,7 +175,11 @@ function SurvivalGame.client_onCreate( self )
 
 	g_effectManager = EffectManager()
 	g_effectManager:cl_onCreate()
---[[
+
+	if g_survivalDev then
+		self.network:sendToServer( "sv_setLimitedInventory", false )
+	end
+--[[ SMBACKROOMS
 	-- Music effect
 	g_survivalMusic = sm.effect.createEffect( "SurvivalMusic" )
 	assert(g_survivalMusic)
@@ -209,6 +218,7 @@ function SurvivalGame.bindChatCommands( self )
 		sm.game.bindChatCommand( "/timeofday", { { "number", "timeOfDay", true } }, "cl_onChatCommand", "Sets the time of the day as a fraction (0.5=mid day)" )
 		sm.game.bindChatCommand( "/timeprogress", { { "bool", "enabled", true } }, "cl_onChatCommand", "Enables or disables time progress" )
 		sm.game.bindChatCommand( "/day", {}, "cl_onChatCommand", "Disable time progression and set time to daytime" )
+		sm.game.bindChatCommand( "/level", { { "string", "level", false } }, "cl_onChatCommand", "Go to level <level>." ) --SMBACKROOMS
 		sm.game.bindChatCommand( "/spawn", { { "string", "unitName", true }, { "int", "amount", true } }, "cl_onChatCommand", "Spawn a unit: 'woc', 'tapebot', 'totebot', 'haybot'" )
 		sm.game.bindChatCommand( "/harvestable", { { "string", "harvestableName", true } }, "cl_onChatCommand", "Create a harvestable: 'tree', 'stone'" )
 		sm.game.bindChatCommand( "/cleardebug", {}, "cl_onChatCommand", "Clear debug draw objects" )
@@ -245,7 +255,8 @@ function SurvivalGame.bindChatCommands( self )
 		sm.game.bindChatCommand( "/printtilevalues",  {}, "cl_onChatCommand", "Print all tile values at player position" )
 		sm.game.bindChatCommand( "/reloadcell", {{ "int", "x", true }, { "int", "y", true }}, "cl_onChatCommand", "Reload cells at self or {x,y}" )
 		sm.game.bindChatCommand( "/tutorialstartkit", {}, "cl_onChatCommand", "Spawn a starter kit for building a scrap car" )
-
+		sm.game.bindChatCommand( "/delete", {}, "cl_onChatCommand", "Delete object player is looking at" )	--SMBACKROOMS
+		sm.game.bindChatCommand( "/to00", {}, "cl_onChatCommand", "Because fuck you, that's why" )	--SMBACKROOMS
 
 
 
@@ -437,8 +448,12 @@ function SurvivalGame.cl_onChatCommand( self, params )
 	elseif params[1] == "/day" then
 		self.network:sendToServer( "sv_setTimeOfDay", 0.5 )
 		self.network:sendToServer( "sv_setTimeProgress", false )
+	elseif params[1] == "/level" then --SMBACKROOMS
+		local position = (sm.localPlayer.getPlayer().character.worldPosition)--+sm.localPlayer.getDirection()*5
+		self.network:sendToServer( "sv_callTheFunkyStuff",{ position = position, level = params[2] } )
 	elseif params[1] == "/die" then
 		self.network:sendToServer( "sv_killPlayer", { player = sm.localPlayer.getPlayer() })
+		
 
 
 
@@ -547,6 +562,22 @@ function SurvivalGame.cl_onChatCommand( self, params )
 			}
 			self.network:sendToServer( "sv_importCreation", importParams )
 		end
+	elseif params[1] == "/delete" then	--SMBACKROOMS START
+		local rayCastValid, rayCastResult = sm.localPlayer.getRaycast( 100 )
+		if rayCastValid and rayCastResult.type == "body" then
+			local body = rayCastResult:getBody()
+			local shapes = body:getCreationShapes()
+			for k, shape in pairs( shapes ) do
+				if sm.item.isPart( shape.uuid ) then
+					self.network:sendToServer( "sv_yeetPart", shape )
+				else
+					self.network:sendToServer( "sv_yeetShape", shape )
+				end
+			end
+		end
+	elseif params[1] == "/to00" then
+		local player = ( sm.localPlayer.getPlayer() )
+		self.network:sendToServer( "sv_fuckmyballs", player )	--SMBACKROOMS END
 	elseif params[1] == "/noaggro" then
 		if type( params[2] ) == "boolean" then
 			self.network:sendToServer( "sv_n_switchAggroMode", { aggroMode = not params[2] } )
@@ -573,6 +604,25 @@ function SurvivalGame.cl_onChatCommand( self, params )
 		self.network:sendToServer( "sv_onChatCommand", params )
 	end
 end
+
+--SMBACKROOMS START
+function SurvivalGame.cl_00Fard( self )
+	local player = ( sm.localPlayer.getPlayer() )
+	self.network:sendToServer( "sv_fuckmyballs", player )
+end
+
+function SurvivalGame.sv_yeetPart( self, shape )
+    shape:destroyPart( 0 )
+end
+
+function SurvivalGame.sv_yeetShape( self, shape )
+	shape:destroyShape( 0 )
+end
+
+function SurvivalGame.sv_fuckmyballs( self, player )
+	player:getCharacter():setWorldPosition( sm.vec3.new( 0, 0, 1 ) )
+end
+--SMBACKROOMS END
 
 function SurvivalGame.sv_reloadCell( self, params, player )
 	print( "sv_reloadCell Reloading cell at {" .. params.x .. " : " .. params.y .. "}" )
@@ -627,17 +677,22 @@ function SurvivalGame.sv_giveItem( self, params )
 end
 
 function SurvivalGame.cl_n_onJoined( self, params )
-	self.cl.playIntroCinematic = params.newPlayer
+--	self.cl.playIntroCinematic = params.newPlayer SMBACKROOMS
 end
 
+
 function SurvivalGame.client_onLoadingScreenLifted( self )
+	--[[
 	self.network:sendToServer( "sv_n_loadingScreenLifted" )
 	if self.cl.playIntroCinematic then
 		local callbacks = {}
 		callbacks[#callbacks + 1] = { fn = "cl_onCinematicEvent", params = { cinematicName = "cinematic.survivalstart01" }, ref = self }
 		g_effectManager:cl_playNamedCinematic( "cinematic.survivalstart01", callbacks )
 	end
+	--]] --SMBACKROOMS (this is how a real master does it)
+	print("donut lord (reference??!?!?!?)")
 end
+--[[
 
 function SurvivalGame.sv_n_loadingScreenLifted( self, _, player )
 	if not g_survivalDev then
@@ -658,7 +713,7 @@ function SurvivalGame.cl_onCinematicEvent( self, eventName, params )
 		sm.event.sendToPlayer( myPlayer, "cl_n_endFadeToBlack", { duration = IntroEndFadeDuration } )
 	end
 end
-
+]]--
 
 
 
@@ -750,11 +805,11 @@ end
 
 function SurvivalGame.sv_exportCreation( self, params )
 	local obj = sm.json.parseJsonString( sm.creation.exportToString( params.body ) )
-	sm.json.save( obj, "$SURVIVAL_DATA/LocalBlueprints/"..params.name..".blueprint" )
+	sm.json.save( obj, "$CONTENT_DATA/ImportBlueprints/"..params.name..".blueprint" )
 end
 
 function SurvivalGame.sv_importCreation( self, params )
-	sm.creation.importFromFile( params.world, "$SURVIVAL_DATA/LocalBlueprints/"..params.name..".blueprint", params.position )
+	sm.creation.importFromFile( params.world, "$CONTENT_DATA/ImportBlueprints/"..params.name..".blueprint", params.position )
 end
 
 function SurvivalGame.sv_onChatCommand( self, params, player )
