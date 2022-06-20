@@ -1,7 +1,8 @@
-local level0_data = { {name = "lv0corridor1", x = (28/4), y = (28/4), jnt = {"N", "S" } },
+local level0_data = {--[[ {name = "lv0corridor1", x = (28/4), y = (28/4), jnt = {"N", "S" } },
                 {name = "lv0corridor2", x = (28/4), y = (28/4), jnt = {"N", "W" } }, 
 		{name = "lv0corridor3", x = (28/4), y = (28/4), jnt = {"N", "E", "W" } }, 
-		{name = "lv0corridor4", x = (28/4), y = (28/4), jnt = {"N", "E", "W", "S" } }
+		{name = "lv0corridor4", x = (28/4), y = (28/4), jnt = {"N", "E", "W", "S" } }]] 
+	
 }
 
 pendingGeneration = {}
@@ -24,20 +25,20 @@ cellData[50][50] = level0_data[4]
 
 while rev < 6 do
 for a, b in pairs(cellData) do 
-if a > 79 or a < 1 then break end 
+
 	for c, d in pairs(b) do 
 	if c > 79 or c < 1 then break end
 	if d == nil then d = {} end
 	for k, v in pairs(d.jnt) do
-		if rev <= 5 then
+		if 
 			local newCell = level0_data[math.random(1,4)]
 			if v == "N" then cellData[a][c+1] = newCell
 			elseif v == "E" then cellData[a-1][c] = newCell
 			elseif v == "W" then cellData[a+1][c] = newCell
 			elseif v == "S" then cellData[a][c-1] = newCell
 			end
-		else 
-			local newCell = level0_data[4]
+		
+			newCell = level0_data[4]
 			if v == "N" and not cellData[a][c+1].jnt["S"] then  
 			elseif v == "E" and not cellData[a-1][c].jnt["W"] then 
 			elseif v == "W" and not cellData[a+1][c].jnt["E"] then 
@@ -53,7 +54,7 @@ end
 
 for q, w in pairs(cellData) do for p, m in pairs(w) do
   if m == nil then m = level0_data[4] end
- sm.creation.importFromFile( sm.player.getAllPlayers()[1].character:getWorld(), "$CONTENT_DATA/Blueprints/"..m.name..".blueprint", sm.vec3.new(-(80*7)+(6*q), -(80*7)+(6*p), -1) )
+-- sm.creation.importFromFile( sm.player.getAllPlayers()[1].character:getWorld(), "$CONTENT_DATA/Blueprints/"..m.name..".blueprint", sm.vec3.new(-(80*7)+(6*q), -(80*7)+(6*p), -1) )
 end end
 end
 --bottom 4, top 16
@@ -109,7 +110,7 @@ end
 function generateBorder() 
 local a, b = 0, 0
 while a < 40 do while b < 40 do
- sm.creation.importFromFile( sm.player.getAllPlayers()[1].character:getWorld(), "$CONTENT_DATA/Blueprints/lv0corridor4.blueprint", sm.vec3.new(0+(b), 0+(a), 64) )
+-- sm.creation.importFromFile( sm.player.getAllPlayers()[1].character:getWorld(), "$CONTENT_DATA/Blueprints/lv0corridor4.blueprint", sm.vec3.new(0+(b), 0+(a), 64) )
 b = b + 1
 end
 b = 0 
