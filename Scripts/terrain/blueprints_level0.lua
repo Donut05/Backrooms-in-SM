@@ -1,3 +1,8 @@
+--NOTE: We're preparing the void with this script.
+--We will be loading LEVEL 0 from the world script when the world is ready.
+--thanks for the humourous logs bri'ish guy xD
+--r4ndytaylor69 20.06.22
+
 function Init( world, generatorIndex )
     print("frick you lol")
 end
@@ -76,5 +81,9 @@ function GetNodesForCell( cellX, cellY )
 end
 
 function GetTilePath( uid )
+    uid = sm.uuid.new("f5aa9696-6a11-4666-bc9c-1dc6efb6c82f")
+    --here goes nothing...
+    --r4ndytaylor69, 20.06.22
+    
     print("my uuid is 696969-6969-6969-696969 😩😩")
 end
