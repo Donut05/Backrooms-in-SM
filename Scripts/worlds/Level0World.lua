@@ -1,4 +1,5 @@
 dofile( "$SURVIVAL_DATA/Scripts/game/worlds/BaseWorld.lua")
+dofile("$CONTENT_DATA/Scripts/lvl0data.lua")
 
 Level0World = class( BaseWorld )
 Level0World.terrainScript = "$CONTENT_DATA/Scripts/terrain/blueprints_level0.lua" -- fix later lol
