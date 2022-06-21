@@ -44,21 +44,6 @@ function GetEffectMaterialAt( x, y )
 	return "Dirt"
 end
 
-function GetAssetsForCell( cellX, cellY, lod )
-    print("Broooooooooooooooooooo wtf why would you do that")
-end
-
-function GetDecalsForCell( cellX, cellY )
-    print("half life 3 moment")
-end
-
-function GetHarvestablesForCell( cellX, cellY, lod )
-    print("yooo raft chapter 4??!?")
-end
-
-function GetKinematicsForCell( cellX, cellY, lod )
-    print("return my left nut lol")
-end
 
 blueprintTable = {}
 
@@ -72,17 +57,10 @@ function PrepareCell( cellX, cellY, loadFlags )
     print("prepare my cells lol")
 end
 
-function GetCreationsForCell( cellX, cellY )
-    print("ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
-end
-
-function GetNodesForCell( cellX, cellY )
-    print("no-de")
-end
-
 function GetTilePath( uid )
-    uid = sm.uuid.new("f5aa9696-6a11-4666-bc9c-1dc6efb6c82f")
+  --  uid = sm.uuid.new("f5aa9696-6a11-4666-bc9c-1dc6efb6c82f")
     --here goes nothing...
+    --IT INDEED GOT NOTHING, FUCK TERRAIN TILE GENERATION!
     --r4ndytaylor69, 20.06.22
     
     print("my uuid is 696969-6969-6969-696969 😩😩")

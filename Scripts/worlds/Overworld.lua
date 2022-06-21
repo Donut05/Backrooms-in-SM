@@ -1,6 +1,5 @@
 dofile( "$SURVIVAL_DATA/Scripts/game/worlds/BaseWorld.lua")
-
-
+dofile( "$CONTENT_DATA/Scripts/0leveldata.lua")
 
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/WaterManager.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/PackingStationManager.lua" )
@@ -446,7 +445,10 @@ function Overworld.server_onCellCreated( self, x, y )
 
 	g_elevatorManager:sv_loadElevatorsOnOverworldCell( x, y, tags )
 
-
+	if(sm.player.getAllPlayers()[1] ~= nil and sm.player.getAllPlayers()[1].character ~= nil) and not self.terrainGenerated then
+		self.terrainGenerated = true
+		spawnTerrain()	
+	end
 
 
 
