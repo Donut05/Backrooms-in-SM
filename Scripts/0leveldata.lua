@@ -32,7 +32,7 @@ for a, b in pairs(cellData) do
 		local newCell = level0_data[math.random(1,4)]
 		if v == "N" and not cellData[a][c+1] then cellData[a][c+1] = newCell
 			elseif v == "E" and not cellData[a-1][c] then cellData[a-1][c] = newCell
-			elseif v == "W" and not cellData[a+1][c]then cellData[a+1][c] = newCell
+			elseif v == "W" and not cellData[a+1][c] then cellData[a+1][c] = newCell
 			elseif v == "S" and not cellData[a][c-1] then cellData[a][c-1] = newCell
 		end
 		
