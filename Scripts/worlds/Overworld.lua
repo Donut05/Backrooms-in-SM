@@ -26,7 +26,6 @@ Overworld.cellMaxY = 47
 
 function  Overworld.sv_gotoLevel( self, args ) -- SMBACKROOMS
 	print(args)
-	--[[
 	hookuuid = sm.uuid.generateRandom()
 	local portal = sm.portal.createPortal(sm.vec3.new(10000,10000,10000))
 	portal:setOpeningA((args.position + sm.vec3.new(0, 0, 0.5)), sm.vec3.getRotation(sm.vec3.new(0,0,1),sm.vec3.new(0,0,1)))
@@ -37,8 +36,6 @@ function  Overworld.sv_gotoLevel( self, args ) -- SMBACKROOMS
 	local loltest = portal:transferAToB()
 	print(loltest)
 	sm.portal.destroy(portal)
-	--]]
-	
 end
 
 
