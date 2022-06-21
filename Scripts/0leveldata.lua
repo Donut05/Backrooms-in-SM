@@ -117,7 +117,13 @@ print("SPAWNING DUNGEON")
 for q, w in pairs(cellData) do for p, m in pairs(w) do
 
   if m == nil then m = level0_data[4] end
- sm.creation.importFromFile(sm.world.getCurrentWorld(), "$CONTENT_DATA/Blueprints/"..m.name..".blueprint", sm.vec3.new(-(80*7)+(6*q), -(80*7)+(6*p), 64) )
+  local creation = sm.creation.importFromFile(sm.world.getCurrentWorld(), "$CONTENT_DATA/Blueprints/"..m.name..".blueprint", sm.vec3.new(-(80*7)+(6*q), -(80*7)+(6*p), 64) )
+  for _,body in pairs(creation) do
+	  body:setErasable(false)
+	  body:setDestructable(false)
+	  body:setConvertibleToDynamic(false)
+	  body:setBuildable(false)
+  end
 end end
 print("TELEPORTING ALL PLAYERS TO LEVEL 0")
 for ext, players in pairs(sm.player.getAllPlayers()) do
