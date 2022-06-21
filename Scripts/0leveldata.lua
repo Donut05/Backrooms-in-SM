@@ -30,10 +30,10 @@ for a, b in pairs(cellData) do
 	if a < 78 and a > 3 and c < 78 and c > 3 then 
 	for k, v in pairs(d.jnt) do
 		local newCell = level0_data[math.random(1,4)]
-		if v == "N" then cellData[a][c+1] = newCell
-			elseif v == "E" then cellData[a-1][c] = newCell
-			elseif v == "W" then cellData[a+1][c] = newCell
-			elseif v == "S" then cellData[a][c-1] = newCell
+		if v == "N" and not cellData[a][c+1] then cellData[a][c+1] = newCell
+			elseif v == "E" and not cellData[a-1][c] then cellData[a-1][c] = newCell
+			elseif v == "W" and not cellData[a+1][c]then cellData[a+1][c] = newCell
+			elseif v == "S" and not cellData[a][c-1] then cellData[a][c-1] = newCell
 		end
 		
 			
@@ -51,7 +51,7 @@ local function checkInTable(tbl, val)
     end
   end
 end 
---VERIFY DUNGEON
+--VERIFY DUNGEON (TEMPORARY CODE, PENDING REWRITE)
 while rev < 93 do
 print("VERIFYING DUNGEON: ", rev, "ITERATIONS")
 
