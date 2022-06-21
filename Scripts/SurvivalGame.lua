@@ -50,7 +50,7 @@ function SurvivalGame.server_onCreate( self )
 		self.sv.saved = {}
 		self.sv.saved.data = self.data
 		printf( "Seed: %.0f", self.sv.saved.data.seed )
-		self.sv.saved.overworld = sm.world.createWorld( "$CONTENT_DATA/Scripts/worlds/Overworld.lua", "Overworld", { dev = self.sv.saved.data.dev }, self.sv.saved.data.seed ) --SMBACKROOMS
+		self.sv.saved.overworld = sm.world.createWorld( "$CONTENT_DATA/Scripts/worlds/Level0World.lua","Level0World", { dev = self.sv.saved.data.dev }, self.sv.saved.data.seed ) --SMBACKROOMS
 		self.sv.saved.levels = {}
 		self.sv.saved.levels["0"] = sm.world.createWorld("$CONTENT_DATA/Scripts/worlds/Level0World.lua","Level0World")
 		self.storage:save( self.sv.saved )
