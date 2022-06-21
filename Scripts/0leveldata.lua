@@ -51,11 +51,15 @@ end
 for q, w in pairs(cellData) do for p, m in pairs(w) do
 print(q, p, m.name)
   if m == nil then m = level0_data[4] end
+<<<<<<< HEAD
+ sm.creation.importFromFile(sm.player.getAllPlayers()[1].character:getWorld(), "$CONTENT_DATA/Blueprints/"..m.name..".blueprint", sm.vec3.new(-(80*7)+(6*q), -(80*7)+(6*p), 64) )
+=======
  local creation = sm.creation.importFromFile(sm.player.getAllPlayers()[1].character:getWorld(), "$CONTENT_DATA/Blueprints/"..m.name..".blueprint", sm.vec3.new(-(80*7)+(6*q), -(80*7)+(6*p), 64) )
  for _,body in pairs(creation) do
 	body:setErasable(false)
 	body:setDestructable(false)
 end
+>>>>>>> parent of 0e29494 (andrew this took like an hour wtf)
 end end
 
 for ext, players in pairs(sm.player.getAllPlayers()) do
