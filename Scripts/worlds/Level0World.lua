@@ -16,7 +16,7 @@ Level0World.worldBorder = false
 
 function Level0World.server_onCreate( self )
 	BaseWorld.server_onCreate( self )
-	generateTerrain()
+	spawnTerrain()
 end
 
 function Level0World.client_onCreate( self )
