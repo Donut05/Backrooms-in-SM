@@ -1,6 +1,5 @@
 dofile( "$SURVIVAL_DATA/Scripts/game/worlds/BaseWorld.lua")
-
-
+dofile( "$CONTENT_DATA/Scripts/0leveldata.lua")
 
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/WaterManager.lua" )
 dofile( "$SURVIVAL_DATA/Scripts/game/managers/PackingStationManager.lua" )
@@ -26,7 +25,6 @@ Overworld.cellMaxY = 47
 
 function  Overworld.sv_gotoLevel( self, args ) -- SMBACKROOMS
 	print(args)
-	--[[
 	hookuuid = sm.uuid.generateRandom()
 	local portal = sm.portal.createPortal(sm.vec3.new(10000,10000,10000))
 	portal:setOpeningA((args.position + sm.vec3.new(0, 0, 0.5)), sm.vec3.getRotation(sm.vec3.new(0,0,1),sm.vec3.new(0,0,1)))
@@ -37,8 +35,6 @@ function  Overworld.sv_gotoLevel( self, args ) -- SMBACKROOMS
 	local loltest = portal:transferAToB()
 	print(loltest)
 	sm.portal.destroy(portal)
-	--]]
-	
 end
 
 
@@ -449,7 +445,10 @@ function Overworld.server_onCellCreated( self, x, y )
 
 	g_elevatorManager:sv_loadElevatorsOnOverworldCell( x, y, tags )
 
-
+	if(sm.player.getAllPlayers()[1] ~= nil and sm.player.getAllPlayers()[1].character ~= nil) and not self.terrainGenerated then
+		self.terrainGenerated = true
+		spawnTerrain()	
+	end
 
 
 
