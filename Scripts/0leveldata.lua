@@ -127,7 +127,7 @@ for q, w in pairs(cellData) do for p, m in pairs(w) do
 end end
 print("TELEPORTING ALL PLAYERS TO LEVEL 0")
 for ext, players in pairs(sm.player.getAllPlayers()) do
-players:getCharacter():setWorldPosition(sm.vec3.new(-(80*7)+(6*74),-(80*7)+(6*71),68) )
+players:getCharacter():setWorldPosition(sm.vec3.new(-(80*7)+(6*50),-(80*7)+(6*51),68) )
 end
 end
 --bottom 4, top 16
