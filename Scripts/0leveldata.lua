@@ -13,7 +13,7 @@ cellData = {}
 
 
 function initialiseData(rand, vec3, cellpos)
-	--epty func again????
+	--empty func again????
 end
 
 function initialiseData(rand, vec3, cellpos) end
