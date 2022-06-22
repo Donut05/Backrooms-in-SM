@@ -96,7 +96,7 @@ rev = rev + 1
 end
 print("PATCHING WALLS: ", rev, "ITERATIONS")
 
-print("GENERATING BORDER: ", rev, "ITERATIONS")
+--[[print("GENERATING BORDER: ", rev, "ITERATIONS")
 local rax, rbx = 1, 1
 while rax < 84 do
 	if cellData[rax] == nil then
@@ -112,7 +112,7 @@ while rax < 84 do
 		rbx = rbx + 1
 	end
 	rax = rax + 1
-end
+end--]]
 
 print("SPAWNING DUNGEON")
 for q, w in pairs(cellData) do for p, m in pairs(w) do
