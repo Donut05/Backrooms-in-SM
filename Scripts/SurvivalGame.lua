@@ -891,7 +891,7 @@ function SurvivalGame.server_onPlayerJoined( self, player, newPlayer )
 		local inventory = player:getInventory()
 
 		sm.container.beginTransaction()
-
+		--[[ --SMBACKROOMS
 		if g_survivalDev then
 			--Hotbar
 			sm.container.setItem( inventory, 0, tool_sledgehammer, 1 )
@@ -907,6 +907,7 @@ function SurvivalGame.server_onPlayerJoined( self, player, newPlayer )
 			sm.container.setItem( inventory, 0, tool_sledgehammer, 1 )
 			sm.container.setItem( inventory, 1, tool_lift, 1 )
 		end
+		--]]
 
 		sm.container.endTransaction()
 
