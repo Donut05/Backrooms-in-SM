@@ -7,6 +7,7 @@ local level0_data = {{name = "Kit_Backrooms_0_Corridor_1Way", x = (28/4), y = (2
 }
 --ADD YOUR BLUEPRINTS AFTER, DO NOT EDIT ENTRY 4 & 5 (4 WAY CORRIDOR & NO WALL CORRIDOR)
 --UPDATE: TO RED GAL: it is now okay to keep rocks behind the walls. still, please remove extra rocks behind the pillar for 1 2 3 4 corridors.
+--Ok lmao |Illumina, 21.06.22
 --r4ndytaylor69, 21.06.22
 cellData = {}
 
