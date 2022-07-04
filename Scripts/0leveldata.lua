@@ -1,14 +1,43 @@
-local level0_data = {{name = "Kit_Backrooms_0_Corridor_1Way", x = (28/4), y = (28/4), jnt = {"N",  "S" } },
-                {name = "Kit_Backrooms_0_Corridor_2Way", x = (28/4), y = (28/4), jnt = { "N", "W" } }, 
-		{name = "Kit_Backrooms_0_Corridor_3Way", x = (28/4), y = (28/4), jnt = { "N", "E", "W" } }, 
-		{name = "Kit_Backrooms_0_Corridor_4Way", x = (28/4), y = (28/4), jnt = {"N", "E", "W", "S" } },
-		{name = "Kit_Backrooms_0_Corridor_NoWalls", x = (28/4), y = (28/4), jnt = {"N", "E", "W", "S" } }
-	
+local level0_data = {
+		{name = "Kit_Backrooms_0_Corridor_1Way", x = (28/4), y = (28/4), jnt = {"N",  "S" }, rotationindex = {0,0,0}},
+        {name = "Kit_Backrooms_0_Corridor_2Way", x = (28/4), y = (28/4), jnt = { "N", "W" }, rotationindex = {0,0,0} }, 
+		{name = "Kit_Backrooms_0_Corridor_3Way", x = (28/4), y = (28/4), jnt = { "N", "E", "W" }, rotationindex = {0,0,0} }, 
+		{name = "Kit_Backrooms_0_Corridor_4Way", x = (28/4), y = (28/4), jnt = {"N", "E", "W", "S" }, rotationindex = {0,0,0} },
+		{name = "Kit_Backrooms_0_Corridor_NoWalls", x = (28/4), y = (28/4), jnt = {"N", "E", "W", "S" }, rotationindex = {0,0,0} },
+		{name = "Kit_Backrooms_0_Corridor_1Wall", x = (28/4), y = (28/4), jnt = {"N" }, rotationindex = {0,0,0}},
 }
+
 --ADD YOUR BLUEPRINTS AFTER, DO NOT EDIT ENTRY 4 & 5 (4 WAY CORRIDOR & NO WALL CORRIDOR)
---UPDATE: TO RED GAL: it is now okay to keep rocks behind the walls. still, please remove extra rocks behind the pillar for 1 2 3 4 corridors.
---Ok lmao |Illumina, 21.06.22
+--UPDATE: TO ILLUMINA: it is now okay to keep rocks behind the walls. but still, please remove extra rocks behind the pillars for 1 2 3 4 corridors.
 --r4ndytaylor69, 21.06.22
+--Ok lmao |Illumina, 21.06.22
+--You did not remove the extra rocks. it is still Z-fighting.
+--r4ndytaylor69, 22.06.22
+local rotation_data = {
+	{{0,90,0}, {"N"}, {"E"} },
+	{{0,0,0}, {"N"}, {"N"} },
+	{{0,180,0}, {"N"}, {"W"} },
+	{{0,270,0}, {"N"}, {"S"} },
+	{ {0,90,0}, {"N", "S"}, {"E", "W"} },
+	{ {0,0,0}, {"N", "S"}, {"N", "S"} },
+	{{0,90,0}, {"N", "W"}, {"N", "E"} },
+	{{0,0,0}, {"N", "W"}, {"N", "Q"} },
+	{{0,180,0}, {"N", "W"}, {"E", "S"} },
+	{{0,270,0}, {"N", "W"}, {"W", "S"} },
+	{{0,0, 0}, {"N", "E", "W"}, {"N","E","W"} },
+	{{0,90, 0}, {"N", "E", "W"}, {"N","W","S"} },
+	{{0,180,0}, {"N", "E", "W"},{"E","W","S"}  },
+	{{0,270,0}, {"N", "E", "W"}, {"N","E","S"} },
+	{{0,0,0}, {"N","E","W","S"}, {"N","E","W","S"} }
+}
+--[[
+	ROTATION INDEX:
+	1 WAY: E, W = ROTATION 90 DEGREES - |
+	2 WAY: N, E = ROTATION 90 DEGREES, E, S = ROTATION 180 DEGREES, W, S = ROTATION 270 DEGREES
+	3 WAY: N, W, S = ROTATION 90 DEGREES, E, W, S = ROTATION 180 DEGREES, N, E, S = ROTATION 270 DEGREES
+	4 WAY: ANY
+]]
+
 cellData = {}
 
 function spawnTerrain()
@@ -43,6 +72,23 @@ end end
 rev = rev + 1
 end
 rev = 1
+local function compareTables(t1, t2)
+if #t1 ~= #t2 then return false end
+	for i=1,#t1 do
+	  if t1[i] ~= t2[i] then return false end
+	end
+	return true
+end
+
+local function removeTableKey(tbl, val)
+	for i,v in ipairs(tbl) do
+	  if v == val then
+		table.remove(tbl, i)
+		return tbl
+	  end
+	end
+  end 
+
 local function checkInTable(tbl, val)
   for i,v in ipairs(tbl) do
     if v == val then
@@ -51,74 +97,76 @@ local function checkInTable(tbl, val)
   end
 end 
 --VERIFY DUNGEON (TEMPORARY CODE, PENDING REWRITE)
-while rev < 93 do
+while rev < 2 do
 print("VERIFYING DUNGEON: ", rev, "ITERATIONS")
 
 for aa, bb in pairs(cellData) do 
 
 	for cc, dd in pairs(bb) do 
-	if aa < 78 and aa > 3 and cc < 78 and cc > 3 then 
---	dd.violations = dd.jnt
-	--GET DUNGEON VIOLATIONS
-	for k, v in pairs(dd.jnt) do
-		local newCell = level0_data[math.random(1,4)]
-		local status = {}
-		local Q, W, E, R = cellData[aa][cc+1], cellData[aa-1][cc], cellData[aa+1][cc], cellData[aa][cc-1]
-		if (Q) and (W) and (E) and (R) then if (Q.jnt) and (W.jnt) and (E.jnt) and (R.jnt) then
-			if v == "N" then 
-				status[1] = "S"
-				status[2] = cellData[aa][cc+1]
-			elseif v == "E" and W.jnt.W == nil then 
-				status[1] = "W"
-				status[2] = cellData[aa-1][cc]
-			elseif v == "W" and E.jnt.E == nil then 
-				status[1] = "E"
-				status[2] = cellData[aa+1][cc]
-			elseif v == "S" and R.jnt.N == nil then 
-				status[1] = "N"
-				status[2] = cellData[aa][cc-1]
-			else break 
-			end	
-			if not checkInTable(status[2], status[1]) then 
-				while(not checkInTable(newCell.jnt, status[1])) do
-					newCell = level0_data[5]
-				end
-				if(status[1] == "S") then cellData[aa][cc+1] = newCell end
-				if(status[1] == "W") then cellData[aa-1][cc] = newCell end
-				if(status[1] == "E") then cellData[aa+1][cc] = newCell end
-				if(status[1] == "N") then cellData[aa][cc-1] = newCell end
+		if aa < 78 and aa > 3 and cc < 78 and cc > 3 then 
+			local violations = dd.jnt
+			for k, v in pairs(dd.jnt) do
+				local newCell = level0_data[math.random(1,4)]
+				local status = {}
+				local Q, W, E, R = cellData[aa][cc+1], cellData[aa-1][cc], cellData[aa+1][cc], cellData[aa][cc-1]
+				if (Q) and (W) and (E) and (R) then if (Q.jnt) and (W.jnt) and (E.jnt) and (R.jnt) then
+					if v == "N" and not checkInTable(Q.jnt, "S") then
+						violations = removeTableKey(violations, v)
+					elseif v == "S" and not checkInTable(R.jnt, "N") then
+						violations = removeTableKey(violations, v)
+					elseif v == "E" and not checkInTable(W.jnt, "W") then
+						violations = removeTableKey(violations, v)
+					elseif v == "W" and not checkInTable(E.jnt, "E") then
+						violations = removeTableKey(violations, v)
+					end
+
+				end end
+			
 			end
-		end end
-	end
+			for rotation, data in pairs(rotation_data) do
+			
+				if (compareTables(violations, data[3])) then
+					for newtile, finder in pairs(level0_data) do
+						if (compareTables(data[2], finder.jnt)) then
+							dd = finder
+							dd.jnt = data[2]
+							dd.rotationindex = data[1]
+							break
+						end
+					end
+				end
+			end
+
+		end
+	end 
 end
-end end
 rev = rev + 1
 end
 print("PATCHING WALLS: ", rev, "ITERATIONS")
 
---[[print("GENERATING BORDER: ", rev, "ITERATIONS")
-local rax, rbx = 1, 1
-while rax < 84 do
-	if cellData[rax] == nil then
-		cellData[rax] = {}
-	end
-	rbx = 0
-	while rbx < 84 do
+print("GENERATING BORDER: ", rev, "ITERATIONS")
+-- local rax, rbx = 1, 1
+-- while rax < 84 do
+-- 	if cellData[rax] == nil then
+-- 		cellData[rax] = {}
+-- 	end
+-- 	rbx = 0
+-- 	while rbx < 84 do
 		
-		if cellData[rax][rbx] == nil then
-			print(rax, rbx)
-			cellData[rax][rbx] = level0_data[4]	
-		end
-		rbx = rbx + 1
-	end
-	rax = rax + 1
-end--]]
+-- 		if cellData[rax][rbx] == nil then
+-- 			cellData[rax][rbx] = level0_data[4]	
+-- 		end
+-- 		rbx = rbx + 1
+-- 	end
+-- 	rax = rax + 1
+-- end
 
 print("SPAWNING DUNGEON")
 for q, w in pairs(cellData) do for p, m in pairs(w) do
 
   if m == nil then m = level0_data[4] end
-  local creation = sm.creation.importFromFile(sm.world.getCurrentWorld(), "$CONTENT_DATA/Blueprints/"..m.name..".blueprint", sm.vec3.new(-(80*7)+(6*q), -(80*7)+(6*p), 64) )
+  --FUCK YOU Z-UP YOU BLOODY POOPER PISS OFF
+  local creation = sm.creation.importFromFile(sm.world.getCurrentWorld(), "$CONTENT_DATA/Blueprints/"..m.name..".blueprint", sm.vec3.new(-(80*7)+(6*q), -(80*7)+(6*p), 64), sm.quat.fromEuler(sm.vec3.new(m.rotationindex[1], m.rotationindex[3], m.rotationindex[2])) )
   for _,body in pairs(creation) do
 	  body:setErasable(false)
 	  body:setDestructable(false)
