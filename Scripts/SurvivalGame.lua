@@ -39,7 +39,7 @@ local IntroEndFadeDuration = 1.1
 local IntroFadeTimeout = 5.0
 
 function SurvivalGame.sv_callTheFunkyStuff(self,args)
-	sm.event.sendToWorld(self.sv.saved.overworld,"sv_gotoLevel", { position = args.position, world = self.sv.saved.levels[args.level] })
+	sm.event.sendToWorld(self.sv.saved.levels[args.level],"sv_gotoLevel", { player = args.player })
 end
 function SurvivalGame.server_onCreate( self )
 	print( "SurvivalGame.server_onCreate" )
@@ -50,9 +50,9 @@ function SurvivalGame.server_onCreate( self )
 		self.sv.saved = {}
 		self.sv.saved.data = self.data
 		printf( "Seed: %.0f", self.sv.saved.data.seed )
-		self.sv.saved.overworld = sm.world.createWorld( "$CONTENT_DATA/Scripts/worlds/Overworld.lua", "Overworld", { dev = self.sv.saved.data.dev }, self.sv.saved.data.seed ) --SMBACKROOMS
-		self.sv.saved.levels = {}
-	--	self.sv.saved.overworld = sm.world.createWorld("$CONTENT_DATA/Scripts/worlds/Level0World.lua","Level0World")
+	--	self.sv.saved.overworld = sm.world.createWorld( "$CONTENT_DATA/Scripts/worlds/Overworld.lua", "Overworld", { dev = self.sv.saved.data.dev }, self.sv.saved.data.seed ) --SMBACKROOMS
+		self.sv.saved.overworld = sm.world.createWorld("$CONTENT_DATA/Scripts/worlds/Level0World.lua","Level0World")
+		self.sv.saved.levels = {lvl0 = self.sv.saved.overworld}
 		self.storage:save( self.sv.saved )
 	end
 	self.data = nil
@@ -449,8 +449,8 @@ function SurvivalGame.cl_onChatCommand( self, params )
 		self.network:sendToServer( "sv_setTimeOfDay", 0.5 )
 		self.network:sendToServer( "sv_setTimeProgress", false )
 	elseif params[1] == "/level" then --SMBACKROOMS
-		local position = (sm.localPlayer.getPlayer().character.worldPosition)--+sm.localPlayer.getDirection()*5
-		self.network:sendToServer( "sv_callTheFunkyStuff",{ position = position, level = params[2] } )
+		local player = sm.localPlayer.getPlayer()
+		self.network:sendToServer( "sv_callTheFunkyStuff",{ player = player, level = params[2] } )
 	elseif params[1] == "/die" then
 		self.network:sendToServer( "sv_killPlayer", { player = sm.localPlayer.getPlayer() })
 		
